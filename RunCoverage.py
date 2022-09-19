@@ -3,21 +3,31 @@
 # by running all needed commands and automatically opening your coverage results
 # in the default browser of your system.
 #
-# Version 1.0
+# Version 1.1
 # Written by: Gavin Kerr (GavinPlusPlus)
 
 import subprocess
 import os
+import sys
 
 print("================================")
 print("=        RunCoverage.py        =")
 print("=    Written by: Gavin Kerr    =")
-print("=         Version 1.0          =")
+print("=         Version 1.1          =")
 print("================================")
 
 # Get File Path
-project_dir = input("Relative File Path To The Test Project (Ex: Spreadsheet/FormulaTests): ")
 complete_dir = os.path.dirname(os.path.realpath(__file__))
+project_dir = ""
+
+# Test if path is passed via args first
+if (len(sys.argv) > 1): 
+    project_dir = sys.argv[1]
+else:
+    print(f"Current Director: {complete_dir}/")
+    project_dir = input("Relative File Path To The Test Project (Ex: Spreadsheet/FormulaTests): ")
+
+# Complete file path
 complete_dir = complete_dir + "/" + project_dir
 os.chdir(complete_dir)
 

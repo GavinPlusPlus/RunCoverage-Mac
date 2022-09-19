@@ -9,6 +9,8 @@ Overall it's pretty simple. The script just runs your tests, generates the repor
 ## How do I use it?
 Simply drop the RunCoverage.py file into the root of your CS github folder (spreadsheet-GavinPlusPlus for example), then execute the command with `python3 RunCoverage.py`. After that the program will ask you for the relative directory to the test project (`Spreadsheet/FormulaTests` for example) and you are all done.
 
+Alternatively, you can call the script with a command line argument to immediately start testing like this: `python3 RunCoverage.py Spreadsheet/FormulaTests`
+
 ## Dependencies:
 - Python 3.7+
 - coverlet: Must be added to each project you intend to run tests on (`dotnet add package coverlet.collector`)
@@ -17,3 +19,10 @@ Simply drop the RunCoverage.py file into the root of your CS github folder (spre
 ## Compatability:
 - Tested and working on macOS 13.0 Ventura Beta 7
 
+## Changelog:
+
+Version 1.1:
+    Add option to use command line arguments.
+
+Version 1.0: 
+    Initial Release
