@@ -16,13 +16,16 @@ Alternatively, you can call the script with a command line argument to immediate
 - coverlet: Must be added to each project you intend to run tests on (`dotnet add package coverlet.collector`)
 - reportgenerator: Turns the coverlet XML into a human readable report (`dotnet tool install -g dotnet-reportgenerator-globaltool`)
 
+## Troubleshooting: [Click Here!](Troubleshooting.md)
 ## Compatability:
-- Tested and working on macOS 13.0 Ventura Beta 7
+- Tested and working on macOS 13.0 Ventura Beta 8
 
 ## Changelog:
+- Version 1.2:
+    Add some error checking, create Troubleshooting.md
 
-Version 1.1:
+- Version 1.1:
     Add option to use command line arguments.
 
-Version 1.0: 
+- Version 1.0: 
     Initial Release
